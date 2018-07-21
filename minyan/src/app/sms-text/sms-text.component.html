@@ -1,0 +1,63 @@
+
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">sms Text</h3>
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item">sms Text</li>
+                    </ol>
+                </div>
+            </div>
+      
+            <div class="container-fluid">
+
+        <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(0,0,0,0.4)', 
+            backdropBorderRadius: '4px',
+            primaryColour: '#ffffff', 
+            secondaryColour: '#ffffff', 
+            tertiaryColour: '#ffffff' }">
+        </ngx-loading>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Change sms Text </h4>
+                                <h6 class="card-subtitle">here you can change the sms text</h6>
+                                <form #smsdata="ngForm" class="form-material m-t-40" (ngSubmit)="smstextform(smsdata.value)" >
+                                    
+                                    <div class="form-group">
+                                        <label> first meeting sms Text </label>
+                                        <textarea class="form-control" rows="5" name="text1" [(ngModel)]="text11">{{text11}}</textarea>
+                                    </div>
+ 
+									<div class="form-group">
+                                        <label> second  meeting sms Text </label>
+                                        <textarea class="form-control" rows="5" name="text2" [(ngModel)]="text12">{{text12}}</textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label> third  meeting sms Text </label>
+                                        <textarea class="form-control" rows="5" name="text3" [(ngModel)]="text13">{{text13}}</textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>meeting started Text</label>
+                                        <textarea class="form-control" rows="5" name="text4"  [(ngModel)]="text14">{{text14}}</textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>meeting  cancelled Text</label>
+                                        <textarea class="form-control" rows="5" name="text5"  [(ngModel)]="text15">{{text15}}</textarea>
+                                    </div> 
+
+                                     <div class="form-group">
+                                         <button type="submit" class="btn waves-effect waves-light btn-success">Submit</button>
+                                         <a routerLink="/dashboard" class="btn waves-effect waves-light btn-danger">cancel</a>
+                                   	 </div>                                  
+
+                                </form>
+                          </div>                     
+                    </div>
+            	 </div>
+  

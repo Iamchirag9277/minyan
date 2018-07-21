@@ -1,0 +1,58 @@
+
+ 
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">Join Request</h3>
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item">Join Request</li>
+                    </ol>
+                </div>
+            </div>
+      
+            <div class="container-fluid">
+
+                           <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(0,0,0,0.4)', 
+        backdropBorderRadius: '4px',
+        primaryColour: '#ffffff', 
+        secondaryColour: '#ffffff', 
+        tertiaryColour: '#ffffff' }">
+            
+        </ngx-loading>
+
+        
+                    <div class="card">
+   <div class="card-body">
+   						<a style="float: right" routerLink="/add-member" class="btn waves-effect waves-light btn-success pull-right">Add Member</a>
+
+                                <h4 class="card-title">Join Request By User</h4>
+                                <h6 class="card-subtitle">all member list</h6>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Phone Number</th>
+                                                <th>Message</th>
+                                                <th>Accept request</th>
+                                                <th>Decline request</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                    <tr *ngFor="let member of ans2.data">
+                        <td>1</td>
+                        <td>{{member['phone']}}</td>
+                        <td>{{member['message']}}</td>
+                        <td><div class="label label-info" (click)="insertmember(member)">Accept</div></td>
+                         <td><div class="label label-danger" (click)="deletemember(member.id)">Decline</div></td>
+                    </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                            </div>                  
+                    </div>
+            	 </div>
+  

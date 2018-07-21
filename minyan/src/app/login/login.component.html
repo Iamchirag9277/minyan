@@ -1,0 +1,35 @@
+<section id="wrapper">
+    <div class="login-register" style="background-image:url(assets/images/background/login-register.jpg);">
+
+            <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(0,0,0,0.4)', 
+            backdropBorderRadius: '4px',
+            primaryColour: '#ffffff', 
+            secondaryColour: '#ffffff', 
+            tertiaryColour: '#ffffff' }">
+        </ngx-loading>
+
+
+        <div class="login-box card">
+            <div class="card-body">
+                <form class="form-horizontal form-material"   #personForm='ngForm' (ngSubmit)='onSubmit(personForm.value)'  >
+                    <h3 class="box-title m-b-20" style="text-align: center;">Sign In</h3>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text"  placeholder="Username" name="email" ngModel required> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password"  placeholder="Password" name="password" ngModel required> 
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

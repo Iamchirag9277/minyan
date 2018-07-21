@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "assets/plugins/bootstrap/css/bootstrap.min.css";
+@import "assets/plugins/sweetalert/sweetalert.css";
+@import "assets/css/style.css";
+@import "assets/css/colors/blue.css";
+
+     button.btn.btn-success {
+      margin-right: 10px;
+    }
+
+    .label {
+    padding: 8px 0px;
+    width: 93px;
+    text-align: center;
+    cursor: pointer;
+}
+
+ body.hide_nav footer , body.hide_nav app-header, body.hide_nav app-sidebar {
+    display: none;
+}
+body.hide_nav .page-wrapper
+{
+  margin-left: 0px
+  
+}

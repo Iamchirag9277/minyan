@@ -1,0 +1,55 @@
+
+ 
+            <div class="row page-titles">
+                <div class="col-md-5 align-self-center">
+                    <h3 class="text-themecolor">Add Member</h3>
+                </div>
+                <div class="col-md-7 align-self-center">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                        <li class="breadcrumb-item">Add Member</li>
+                    </ol>
+                </div>
+            </div>
+      
+            <div class="container-fluid">
+
+
+                      <ngx-loading [show]="loading" [config]="{ backdropBackgroundColour: 'rgba(0,0,0,0.4)', 
+        backdropBorderRadius: '4px',
+        primaryColour: '#ffffff', 
+        secondaryColour: '#ffffff', 
+        tertiaryColour: '#ffffff' }"></ngx-loading>
+
+        
+                    <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Member Register Form</h4>
+                                <h6 class="card-subtitle">Add Details For Member Registration</h6>
+                                <form class="form-material m-t-40" #addform="ngForm" (ngSubmit)="addmember(addform.value)" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-line"  placeholder="Enter Full Name" name="name" ngModel> 
+                                   	</div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-line"  placeholder="Enter Email Address" name="email" ngModel>
+                                   </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control form-control-line"  placeholder="Enter Phone Number" name="phone" ngModel>
+                                    </div>
+
+                                <!--     <div class="form-group">
+                                        <label>File upload</label>
+                                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                            <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Select file</span> <span class="fileinput-exists">Change</span>
+                                            <input type="file" name="image" ngModel> </span> <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
+                                    </div> -->
+
+                                     <div class="form-group">
+                                         <button type="submit" class="btn waves-effect waves-light btn-success">Submit</button>
+                                         <a routerLink="/active-member" class="btn waves-effect waves-light btn-danger">cancel</a>
+                                   	 </div>
+                                </form>
+                          </div>                     
+                    </div>
+            	 </div>
+  
